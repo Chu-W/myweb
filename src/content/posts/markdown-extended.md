@@ -1,95 +1,44 @@
 ---
-title: Markdown Extended Features
-published: 2024-05-01
-updated: 2024-11-29
-description: 'Read more about Markdown features in Fuwari'
+title: Test
+published: 2025-10-27
+updated: 2025-10-27
+description: 'Test'
 image: ''
 tags: [Demo, Example, Markdown, Fuwari]
 category: 'Examples'
 draft: false 
 ---
 
-## GitHub Repository Cards
-You can add dynamic cards that link to GitHub repositories, on page load, the repository information is pulled from the GitHub API. 
+### 1.1.1 观察反射的情况
 
-::github{repo="Fabrizz/MMM-OnSpotify"}
+设入射振幅为 \( A_0 \)，经过第一个界面的振幅反射/透射系数分别为 \( r_1/t_1 \)，第二个界面为 \( r_2/t_2 \)。
 
-Create a GitHub repository card with the code `::github{repo="<owner>/<repo>"}`.
+在连续反射的过程中，反射波的振幅为 \( A_0 r_1, A_0 t_1 r_2 t_2 e^{i\delta}, A_0 t_1 r_2^3 t_2 e^{2i\delta}, \dots \)
 
-```markdown
-::github{repo="saicaca/fuwari"}
-```
+其中 \( \delta \) 是相位差（相邻两束反射光），后一次反射比前一次反射在平板内多走了一段路程，表达式为
+\[
+\delta = \frac{2\pi}{\lambda_0} \Delta
+\]
 
-## Admonitions
+\( \Delta \) 为光程差，表达式为
+\[
+\Delta = 2n_2 h \cos\theta_2
+\]
 
-Following types of admonitions are supported: `note` `tip` `important` `warning` `caution`
+其中，\( \theta_2 \) 是入射角，\( \lambda_0 \) 是入射波的真空波长，\( h \) 是平板厚度。所以有 \( \delta = \frac{4\pi n_2 h \cos\theta_2}{\lambda_0} \)
 
-:::note
-Highlights information that users should take into account, even when skimming.
-:::
+得到的总的反射波振幅为（注意不是光强）
+\[
+\begin{align*}
+A_{\text{r}} &= A_0 \left[ r_1 + t_1 t_2 r_2 e^{i\delta} \left( 1 + r_2^2 e^{i\delta} + r_2^4 e^{2i\delta} + \cdots \right) \right] \\
+&= A_0 \left( r_1 + \frac{t_1 t_2 r_2 e^{i\delta}}{1 - r_2^2 e^{i\delta}} \right)
+\end{align*}
+\]
 
-:::tip
-Optional information to help a user be more successful.
-:::
-
-:::important
-Crucial information necessary for users to succeed.
-:::
-
-:::warning
-Critical content demanding immediate user attention due to potential risks.
-:::
-
-:::caution
-Negative potential consequences of an action.
-:::
-
-### Basic Syntax
-
-```markdown
-:::note
-Highlights information that users should take into account, even when skimming.
-:::
-
-:::tip
-Optional information to help a user be more successful.
-:::
-```
-
-### Custom Titles
-
-The title of the admonition can be customized.
-
-:::note[MY CUSTOM TITLE]
-This is a note with a custom title.
-:::
-
-```markdown
-:::note[MY CUSTOM TITLE]
-This is a note with a custom title.
-:::
-```
-
-### GitHub Syntax
-
-> [!TIP]
-> [The GitHub syntax](https://github.com/orgs/community/discussions/16925) is also supported.
-
-```
-> [!NOTE]
-> The GitHub syntax is also supported.
-
-> [!TIP]
-> The GitHub syntax is also supported.
-```
-
-### Spoiler
-
-You can add spoilers to your text. The text also supports **Markdown** syntax.
-
-The content :spoiler[is hidden **ayyy**]!
-
-```markdown
-The content :spoiler[is hidden **ayyy**]!
-
-```
+由斯托克斯倒逆关系\( ^\star \)
+\[
+\begin{align*}
+t_1 t_2 &= 1 - r_1^2 \\
+r_2 &= -r_1
+\end{align*}
+\]
