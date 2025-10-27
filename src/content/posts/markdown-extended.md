@@ -21,7 +21,9 @@ $$
 $$
 
 $\Delta$为光程差，表达式为
-$$\Delta = 2n_2 h \cos\theta_2$$
+$$
+\Delta = 2n_2 h \cos\theta_2
+$$
 
 其中，$\theta_2$是入射角，$\lambda_0$是入射波的真空波长，$h$是平板厚度。所以有$\delta = \frac{4\pi n_2 h \cos\theta_2}{\lambda_0}$
 
