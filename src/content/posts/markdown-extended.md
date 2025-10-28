@@ -35,13 +35,6 @@ A_{\text{r}} &= A_0 \left[ r_1 + t_1 t_2 r_2 e^{i\delta} \left( 1 + r_2^2 e^{i\d
 \end{align*}
 $$
 
-由斯托克斯倒逆关系$^\star$
-$$
-\begin{align*}
-t_1 t_2 &= 1 - r_1^2 \\
-r_2 &= -r_1
-\end{align*}
-$$
 
 
 
