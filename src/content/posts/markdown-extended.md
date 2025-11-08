@@ -4,7 +4,7 @@ published: 2025-10-27
 updated: 2025-10-27
 description: 'Test'
 image: ''
-tags: [Demo, Example, Markdown, Fuwari]
+tags: [Demo, Example]
 category: 'Examples'
 draft: false 
 ---
